@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+.wrapper {
+  text-align: center;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container4all{
+  max-width: 1246px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+
+.upper-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  
+}
+.header-text {
+  margin-top: 40px;
+  margin-bottom: 18px;
+  font-family: Roboto, serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.search-for-task-bar {
+  width: 595px;
+  height: 38px;
+  padding: 8px 16px;
+  color: rgba(128, 128, 128, 0.29);
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid #6c63fe;
+}
+.drop-down-menu{
+  width: 85px;
+  height: 38px;
+  color: white;
+  border-radius: 6px;
+  background-color: #6c63fe;
+}
+
+.search-btn{
+  background: none;
+  border: none;
+  position: absolute;
+  margin-left: -60px;
+}
+.search-img{
+  height: 36px;
+}
+.moon-icon{
+  height: 22px;
+  width: 22px;
+  background-color: #6c63fe;
+}
+.change-theme{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 38px;
+  width: 38px;
+  background-color: #6c63fe;
+  border-radius: 6px;
+}
