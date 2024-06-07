@@ -12,29 +12,39 @@
     />
     <link rel="stylesheet" href="todoapp.css" />
   </head>
-  <body>
+  <body>  
     <div class="wrapper">
       <div class="container4all">
         <p class="header-text">TODO LIST</p>
+
         <div class="upper-box">
-          <div class="search-form">
-            <input class="search-for-task-bar" type="text" placeholder="Search note... " />
-            <button class="search-btn"><img class="search-img" src="svgs/SI36PX.svg" alt=""></button>
+          <div class="search-container">
+            <div class="search-form">
+              <input
+                maxlength="50"
+                class="search-for-task-bar"
+                type="text"
+                placeholder="Search note... "
+              />
+              <button class="search-btn">
+                <img class="search-img" src="svgs/Vector.svg" alt="" />
+              </button>
+            </div>
           </div>
-          
+        
+
           <select class="drop-down-menu">
-            <option>ALL</option>
+            <option сlass="dd-preview">ALL</option>
             <option>All</option>
             <option>Complete</option>
             <option>Incomplete</option>
           </select>
-          <div class="change-theme"><img class="moon-icon" src="svgs/moon.svg" alt="" /></div>
-          
+          <div class="change-theme">
+            <img class="moon-icon" src="svgs/moon.svg" alt="" />
+          </div>
         </div>
       </div>
     </div>
-
-
 
     <script src="todoapp.js"></script>
   </body>

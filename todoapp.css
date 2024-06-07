@@ -9,6 +9,12 @@ ol[class] {
   padding: 0;
 }
 
+input {
+  outline: none;
+  font-family: Roboto, sans-serif;
+}
+
+
 body,
 h1,
 h2,
@@ -49,10 +55,19 @@ ol[class] {
 }
 
 .container4all{
+  min-width: 848px;
   max-width: 1246px;
   margin: 0px auto;
   padding: 0px 15px;
   box-sizing: content-box;
+}
+
+.header-text {
+  margin-top: 40px;
+  margin-bottom: 18px;
+  font-family: Roboto, serif;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 
@@ -64,23 +79,18 @@ ol[class] {
   text-align: center;
   
 }
-.header-text {
-  margin-top: 40px;
-  margin-bottom: 18px;
-  font-family: Roboto, serif;
-  font-size: 30px;
-  font-weight: 600;
-}
 
 .search-for-task-bar {
   width: 595px;
   height: 38px;
   padding: 8px 16px;
-  color: rgba(128, 128, 128, 0.29);
+  color: black;
   font-weight: 400;
   border-radius: 6px;
   border: 2px solid #6c63fe;
+  
 }
+
 .drop-down-menu{
   width: 85px;
   height: 38px;
@@ -93,10 +103,13 @@ ol[class] {
   background: none;
   border: none;
   position: absolute;
-  margin-left: -60px;
+  margin-left: -40px;
+  height: 38px;
+
 }
 .search-img{
-  height: 36px;
+  height: 21px;
+  width: 21px;
 }
 .moon-icon{
   height: 22px;
@@ -111,4 +124,7 @@ ol[class] {
   width: 38px;
   background-color: #6c63fe;
   border-radius: 6px;
+}
+.dd-preview{
+  font-weight: 600;
 }
