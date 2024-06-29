@@ -7,14 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ROBOTO down, kanit up -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="todoapp.css" />
   </head>
-  <body>  
+  <body>
     <div class="wrapper">
-      <div class="container4all">
+      <div class="containerall">
         <p class="header-text">TODO LIST</p>
 
         <div class="upper-box">
@@ -31,7 +38,6 @@
               </button>
             </div>
           </div>
-        
 
           <select class="drop-down-menu">
             <option сlass="dd-preview">ALL</option>
@@ -43,9 +49,58 @@
             <img class="moon-icon" src="svgs/moon.svg" alt="" />
           </div>
         </div>
+
+        <div class="tasks-container">
+          <div class="tasks-box">
+            <!-- <div class="task">
+              <input class="task-condition" type="checkbox" />
+              <p class="task-text">FIRST TASK</p>
+              <div class="task-buttons-box">
+                <button class="modify-button">
+                  <img class="corrector-icon" src="svgs/corrector.svg" alt="" />
+                </button>
+                <button class="modify-button">
+                  <img class="deletenote" src="svgs/deletenote.svg" alt="" />
+                </button>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="newnote-box">
+            <button class="btn" data-path="form-popup">
+              <img class="newNote-icon" src="svgs/newNote.svg" alt="" />
+            </button>
+          </div>
+
+          <!-- --------- MODAL-->
+
+          <div class="modals">
+            <div class="modal-overlay">
+              <div
+                class="modal modal--1"
+                id="modal-wnd"
+                data-target="form-popup"
+              >
+                <p class="nn-header">NEW NOTE</p>
+                <input
+                  class="nn-input"
+                  id="task-input"
+                  type="text"
+                  placeholder="Input your note..."
+                />
+                <div class="nn-btn-box">
+                  <button class="cancel-btn nn-btn">CANCEL</button>
+                  <button class="apply-btn nn-btn">APPLY</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of modal ------------- -->
+        </div>
       </div>
     </div>
 
     <script src="todoapp.js"></script>
+    <!-- <script src="jsChanged.js"></script> -->
   </body>
 </html>
