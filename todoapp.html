@@ -10,14 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <!-- ROBOTO down, kanit up -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="todoapp.css" />
+    <link rel="stylesheet" href="night-theme.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -37,6 +38,7 @@
                 <img class="search-img" src="svgs/Vector.svg" alt="" />
               </button>
             </div>
+            <div class="search-results"></div>
           </div>
 
           <select class="drop-down-menu">
@@ -45,35 +47,42 @@
             <option>Complete</option>
             <option>Incomplete</option>
           </select>
-          <div class="change-theme">
+
+          <button class="change-theme change-theme-dark">
             <img class="moon-icon" src="svgs/moon.svg" alt="" />
-          </div>
+            <img class="sun-icon" src="svgs/sun.svg" alt="" />
+          </button>
+          <!-- <button class="change-theme change-theme-light">
+            <img class="sun-icon" src="svgs/sun.svg" alt="" />
+          </button> -->
         </div>
 
         <div class="tasks-container">
           <div class="tasks-box">
+            <!-- here we write tasks -->
+
             <!-- <div class="task">
-              <input class="task-condition" type="checkbox" />
-              <p class="task-text">FIRST TASK</p>
+              <input type="checkbox" class="task-condition" />
+              <p class="task-text">sadasdasdasdasdasdasdasdasdasdasdas</p>
               <div class="task-buttons-box">
-                <button class="modify-button">
-                  <img class="corrector-icon" src="svgs/corrector.svg" alt="" />
+                <button class="modify-btn">
+                  <img class="modify-icon"  src="svgs/corrector.svg" alt="" /></button>
+                <button class="delete-btn">
+                  <img class="delete-icon" src="svgs/deletenote.svg" alt="" />
                 </button>
-                <button class="modify-button">
-                  <img class="deletenote" src="svgs/deletenote.svg" alt="" />
-                </button>
-              </div>
-            </div> -->
+              </div> -->
+
+            <!-- here we write tasks -->
+            </div>
           </div>
 
           <div class="newnote-box">
             <button class="btn" data-path="form-popup">
-              <img class="newNote-icon" src="svgs/newNote.svg" alt="" />
+              <img src="svgs/plus.svg" alt="add note" />
             </button>
           </div>
 
-          <!-- --------- MODAL-->
-
+          <!--  MODAL  -->
           <div class="modals">
             <div class="modal-overlay">
               <div
@@ -95,12 +104,12 @@
               </div>
             </div>
           </div>
-          <!-- end of modal ------------- -->
+          <!--  MODAL  -->
         </div>
       </div>
     </div>
 
     <script src="todoapp.js"></script>
-    <!-- <script src="jsChanged.js"></script> -->
+    
   </body>
 </html>

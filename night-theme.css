@@ -1,0 +1,92 @@
+/* ---- button style ---- */
+.moon-icon{
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-color: #6c63fe;
+  transition: opacity ease-in-out .2s;
+
+}
+
+
+.sun-icon{
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-color: #6c63fe;
+  opacity: 0;
+  transition: opacity ease-in-out .2s;
+}
+
+
+.change-theme {
+  border: none; 
+  outline: none; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 38px;
+  width: 38px;
+  background-color: #6c63fe;
+  border-radius: 6px;
+  transition: all ease-in-out .2s;
+  cursor: pointer
+}
+
+.change-theme:hover{
+  filter: brightness(90%);
+}
+
+.change-theme:active{
+  filter: brightness(30%);
+}
+/* ---- button style ---- */
+
+
+
+
+/* ---- color changer ---- */
+body{
+  transition: all ease-in-out .4s;
+}
+
+
+body.night{
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+
+
+body.night .modal{
+  background-color: rgb(37, 37, 37);
+  border: 1px solid white;
+}
+
+
+body.night .apply-btn:hover{
+  background-color: rgb(37, 37, 37);
+  color: #6c63fe;
+}
+
+
+body.night .search-for-task-bar{
+  background-color: rgb(37, 37, 37);
+  border: 1px solid rgb(75, 75, 75);
+  color: white;
+}
+
+.nn-input{
+  transition: all ease-in-out .4s;
+}
+body.night .nn-input{
+  background-color: rgb(37, 37, 37);
+  border: 1px solid white;
+  color: white;
+}
+
+body.night .sun-icon{
+  opacity: 1;
+}
+body.night .moon-icon{
+  opacity: 0;
+}
