@@ -3,6 +3,35 @@
 let tasks = [];
 let taskId = 0;
 
+// Function to save tasks to localStorage
+function saveToLocalStorage(tasks) {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+
+// Function to load tasks from localStorage
+function loadTasksFromLocalStorage() {
+  tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.forEach((task) => {
+    const taskElement = document.getElementById(`task-${task.id}`); // getting the task element
+    const taskText = taskElement.querySelector('.task-text'); // getting task text
+    const taskCheckbox = taskElement.querySelector('.task-condition'); // getting task checkbox
+    if (task.completed) {
+      taskText.style.textDecoration = 'line-through';
+      taskText.style.color = '#CDCDCD';
+      taskCheckbox.checked = true;
+    } else {
+      taskText.style.textDecoration = 'none';
+      taskText.style.color = 'black';
+      taskCheckbox.checked = false;
+    }
+  });
+}
+
+
+
+
+
 
 // ----- search task
 const searchInput = document.querySelector('.search-for-task-bar');
@@ -32,9 +61,6 @@ searchInput.addEventListener('input', (e) => {
 // ----- search task
 
 
-
-
-
 const btns = document.querySelectorAll('.btn');
 const modalOverlay = document.querySelector('.modal-overlay ');
 const modals = document.querySelectorAll('.modal');
@@ -46,33 +72,10 @@ const applyButton = document.querySelector('.apply-btn');
 const cancelButton = document.querySelector('.cancel-btn');
 
 
-
 // Return tasks from localStorage
 if (localStorage.getItem('tasks')){
   tasks = JSON.parse(localStorage.getItem('tasks'));
 }
-
-
-// function loadTasksFromLocalStorage() {
-//   tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-//   tasks.forEach((task) => {
-//     const taskElement = document.getElementById(`task-${task.id}`); // getting the task element
-//     const taskText = taskElement.querySelector('.task-text'); // getting task text
-//     if (task.completed) {
-//       taskText.style.textDecoration = 'line-through';
-//       taskText.style.color = '#CDCDCD';
-//     } else {
-//       taskText.style.textDecoration = 'none';
-//       taskText.style.color = 'black';
-//     }
-//   });
-// }
-
-
-// loadTasksFromLocalStorage();
-
-
-
 
 
 // modal / Add an event listener to the (ADD NEW TASK) button
@@ -90,8 +93,6 @@ btns.forEach((el) => {
 });
 
 
-
-
 // Add an event listener to the CANCEL
 cancelButton.addEventListener('click', (e) => {
   e.preventDefault(); // prevent default behavior of opening the modal window
@@ -103,9 +104,7 @@ cancelButton.addEventListener('click', (e) => {
 })
 
 
-
-
-// function for crating new task element
+// function for CREATING new task element
 function createTaskElement(task) {
   const newTask = document.createElement('div');
   newTask.className = 'task';
@@ -118,6 +117,15 @@ function createTaskElement(task) {
   const taskText = document.createElement('p');
   taskText.className = 'task-text';
   taskText.innerText = task.text;
+
+
+    if (task.completed) {
+      taskText.style.textDecoration = 'line-through';
+      taskText.style.color = '#CDCDCD';
+    } else {
+      taskText.style.textDecoration = 'none';
+    }
+
 
   const taskButtonsBox = document.createElement('div');
   taskButtonsBox.className = 'task-buttons-box';
@@ -146,11 +154,6 @@ function createTaskElement(task) {
 
   return newTask;
 }
-
-
-
-
-
 
 
 // Function for adding event listeners to the checkbox, modify button and delete button
@@ -189,8 +192,6 @@ function addEventListeners(task, taskElement, taskCheckbox, taskText, modifyButt
 }
 
 
-
-
 // Rendering tasks from localStorage
 if (tasks !== ''){
   tasks.forEach((task) => {
@@ -205,8 +206,6 @@ if (tasks !== ''){
     addEventListeners(task, taskElement, taskCheckbox, taskText, modifyButton, deleteButton);
   });
 }
-
-
 
 
 // Adding an event listener to the "APPLY" button
@@ -246,16 +245,14 @@ applyButton.addEventListener('click', () => {
 });
 
 
-
-
-// Saving tasks to local storage start -------------
+// Saving tasks to local storage -------------
 function saveToLocalStorage(tasks) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 
+// Theme changer -------------
 
-// Theme changer start -------------
 const changeThemeBtn = document.getElementsByClassName('change-theme')[0];
 
 // Check if theme is already saved in localStorage
@@ -273,6 +270,7 @@ changeThemeBtn.addEventListener('click', function(){
   }
 })
 
+// Theme changer -------------
 
 
 
@@ -286,4 +284,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
+
+// Call the loadTasksFromLocalStorage function when the page loads
+loadTasksFromLocalStorage();
 

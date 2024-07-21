@@ -146,6 +146,7 @@ select{
 }
 
 .tasks-box {
+  
 }
 
 .task {
@@ -158,6 +159,7 @@ select{
   border-bottom: 2px solid #6b63fe79;
   padding-bottom: 16px;
   margin-top: 16px;
+  color: inherit;
 }
 
 
@@ -349,4 +351,3 @@ select{
 }
 
 /* */
-
